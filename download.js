@@ -17,7 +17,7 @@
         data: JSON.stringify({
           "uaTime": dateStr,
           "securityInfo": "{\"timestamp\":\"" + dateStr + "\",\"meta\":{}}",
-          "pageSize": 1200,
+          "pageSize": 200,
           "page": 1,
           "coinSymbol": null
         })
@@ -36,7 +36,7 @@
       data: JSON.stringify({
         "uaTime": dateStr,
         "securityInfo": "{\"timestamp\":\"" + dateStr + "\",\"meta\":{}}",
-        "pageSize": 1200,
+        "pageSize": 200,
         "page": 1,
         "coinSymbol": null
       })
@@ -56,7 +56,7 @@
         "uaTime": dateStr,
         "securityInfo": "{\"timestamp\":\"" + dateStr +
           "\",\"meta\":{}}",
-        "pageSize": 1200,
+        "pageSize": 200,
         "page": 1
       })
     });
@@ -75,7 +75,7 @@
           "uaTime": dateStr,
           "securityInfo": "{\"timestamp\":\"" + dateStr +
             "\",\"meta\":{}}",
-          "pageSize": 1200,
+          "pageSize": 200,
           "page": 1
         })
       });
@@ -94,7 +94,7 @@
         "uaTime": dateStr,
         "securityInfo": "{\"timestamp\":\"" + dateStr +
           "\",\"meta\":{}}",
-        "pageSize": 1200,
+        "pageSize": 200,
         "page": 1
       })
     });
@@ -124,7 +124,7 @@
       data: JSON.stringify({
         "uaTime": dateStr,
         "securityInfo": "{\"timestamp\":\"" + dateStr + "\",\"meta\":{}}",
-        "pageSize": 1200,
+        "pageSize": 200,
         "page": 1
       })
     });
