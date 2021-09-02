@@ -17,7 +17,7 @@
         data: JSON.stringify({
           "uaTime": dateStr,
           "securityInfo": "{\"timestamp\":\"" + dateStr + "\",\"meta\":{}}",
-          "pageSize": 1500,
+          "pageSize": 1200,
           "page": 1,
           "coinSymbol": null
         })
@@ -36,7 +36,7 @@
       data: JSON.stringify({
         "uaTime": dateStr,
         "securityInfo": "{\"timestamp\":\"" + dateStr + "\",\"meta\":{}}",
-        "pageSize": 1500,
+        "pageSize": 1200,
         "page": 1,
         "coinSymbol": null
       })
@@ -56,7 +56,7 @@
         "uaTime": dateStr,
         "securityInfo": "{\"timestamp\":\"" + dateStr +
           "\",\"meta\":{}}",
-        "pageSize": 1500,
+        "pageSize": 1200,
         "page": 1
       })
     });
@@ -75,7 +75,7 @@
           "uaTime": dateStr,
           "securityInfo": "{\"timestamp\":\"" + dateStr +
             "\",\"meta\":{}}",
-          "pageSize": 1500,
+          "pageSize": 1200,
           "page": 1
         })
       });
@@ -94,7 +94,7 @@
         "uaTime": dateStr,
         "securityInfo": "{\"timestamp\":\"" + dateStr +
           "\",\"meta\":{}}",
-        "pageSize": 1500,
+        "pageSize": 1200,
         "page": 1
       })
     });
@@ -124,7 +124,7 @@
       data: JSON.stringify({
         "uaTime": dateStr,
         "securityInfo": "{\"timestamp\":\"" + dateStr + "\",\"meta\":{}}",
-        "pageSize": 1500,
+        "pageSize": 1200,
         "page": 1
       })
     });
@@ -136,7 +136,7 @@
       "Received Currency", "Fee Amount", "Fee Currency", "Net Worth Amount",
       "Net Worth Currency", "Label", "Description", "TxHash"].join(",");
 
-    if (withs[2].status == 1500) {
+    if (withs[2].status == 200) {
       withs[0].data.financeList.forEach(function(e) {
         t += "\n" + [new Date(parseInt(e.updateAtTime)).toISOString(),
           e.amount, e.symbol, "", "", e.fee, e.symbol, "", "", "",
@@ -145,7 +145,7 @@
       });
     }
 
-    if (deps[2].status == 1500) {
+    if (deps[2].status == 200) {
       deps[0].data.financeList.forEach(function(e) {
         t += "\n" + [new Date(parseInt(e.updateAtTime)).toISOString(),
           "", "", e.amount, e.symbol, "", "", "", "", "",
@@ -154,7 +154,7 @@
       });
     }
 
-    if (cros[2].status == 1500) {
+    if (cros[2].status == 200) {
       cros[0].data.historyList.forEach(function(e) {
         t += "\n" + [new Date(parseInt(e.createdAtTime)).toISOString(),
           "", "", e.interestAmount, e.coinSymbol, "", "", "", "", "Reward",
@@ -163,7 +163,7 @@
       });
     }
 
-    if (stake[2].status == 1500) {
+    if (stake[2].status == 200) {
       stake[0].data.softStakingInterestList.forEach(function(e) {
         t += "\n" + [new Date(parseInt(e.mtime)).toISOString(), "",
           "", e.amount, e.coinSymbol, "", "", "", "", "Reward",
@@ -172,7 +172,7 @@
       });
     }
 
-    if (rebs[2].status == 1500) {
+    if (rebs[2].status == 200) {
       rebs[0].data.historyList.forEach(function(e) {
         t += "\n" + [new Date(parseInt(e.createdAtTime))
         .toISOString(), "", "", e.rebateAmount, e.coinSymbol, "",
@@ -181,7 +181,7 @@
       });
     }
 
-    if (syn[2].status == 1500) {
+    if (syn[2].status == 200) {
       syn[0].data.activities.forEach(function(e) {
         t += "\n" + [new Date(parseInt(e.userModifyTime))
           .toISOString(), e.committedCRO - e.refundedCRO, "CRO", e
@@ -192,7 +192,7 @@
       });
     }
 
-    if (sup[2].status == 1500) {
+    if (sup[2].status == 200) {
       sup[0].data.historyList.forEach(function(e) {
         t += "\n" + [new Date(parseInt(e.createdAt)).toISOString(),
           "", "", e.rewardAmount, e.coinSymbol, "", "", "", "",
